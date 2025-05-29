@@ -1,10 +1,10 @@
 /* Base style */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fafafa;
+  background-color: #81689D;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #1F2544;
   font-size: 24px; /* ⬅️ Bigger base text */
   line-height: 1.6;
 }
@@ -31,7 +31,7 @@ body {
 .logo {
   font-weight: bold;
   font-size: 1.3em;
-  color: #333;
+  color: #1F2544;
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #1F2544;
   font-weight: 500;
   font-size: 1em;
 }
