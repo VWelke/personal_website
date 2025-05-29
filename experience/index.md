@@ -9,8 +9,8 @@ title: Experience
 
   <div class="card">
     <h3>📡 Cosmic Ray Anomaly</h3>
-    <p>Studied unusual high-energy cosmic rays near the galactic center using simulation tools and statistical analysis.</p>
-    <a href="#">View Details</a>
+    <p>Studied unusual high-energy cosmic rays using simulation and data modeling.</p>
+    <a href="{{ site.baseurl }}/experience/CPD.html">Read More →</a>
   </div>
 
   <div class="card">
