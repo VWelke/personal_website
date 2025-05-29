@@ -3,9 +3,8 @@ layout: default
 title: Blog
 ---
 
-# 📝 Blog
+# Blog
 
-Welcome to my blog! Here I share reflections on research, interesting tools, and notes from my astrophysics journey.
 
 ---
 
