@@ -1,15 +1,19 @@
+/* Base style */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fafafa;
   margin: 0;
   padding: 0;
   color: #333;
+  font-size: 24px; /* ⬅️ Bigger base text */
+  line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1em 2em;
+  padding: 1em 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -21,35 +25,61 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #333;
   text-decoration: none;
 }
 
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
 .nav-links a {
-  margin-left: 1em;
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 1em;
 }
 
 .nav-links a:hover {
   color: #007acc;
 }
 
+/* Main content */
 main {
   max-width: 960px;
-  margin: 2em auto;
-  padding: 0 1em;
+  margin: 3em auto;
+  padding: 0 1.5em;
+  text-align: center;
 }
 
+/* Heading and content */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.2em;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: #007acc;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  margin: 2em 0;
+  margin: 4em 0 2em;
   color: #888;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
