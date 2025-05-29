@@ -4,12 +4,12 @@ title: Observability of Circumplanetary Disks
 ---
 
 
-I WILL DEAL WITH THAT LATER
 
-# 📡 Cosmic Ray Anomaly Project
 
-## 🔍 Summary
-This project involved analyzing high-energy cosmic ray events using simulation datasets from [source name]. We investigated unexpected directional clustering.
+# Observability of Circum-Planetary Disk
+
+
+### Circum-planetary disks are XXXXXX.
 
 ## ⚙️ Methodology
 - Data: XYZ survey (1M+ data points)
