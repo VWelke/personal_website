@@ -10,9 +10,9 @@ title: Experience
   <div class="card">
     <p class="card-date">May 2025</p>
     <h3>Observability of Circum-Planetary Disks with ALMA</h3>
-    <img src="{{ site.baseurl }}/assets/images/band 6.png" alt="CPD Project" class="card-image">
+    <img src="{{ site.baseurl }}/assets/images/band_6.png" alt="CPD Project" class="card-image">
     <p>Studied unusual high-energy cosmic rays using simulation and data modeling.</p>
-    <a href="{{ site.baseurl }}/experience/CPD">Results →</a>
+    <a href="{{ site.baseurl }}/experience/CPD">View Details</a>
   </div>
 
   <div class="card">
