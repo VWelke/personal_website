@@ -1,6 +1,6 @@
 /* Base style */
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #81689D;
   margin: 0;
   padding: 0;
@@ -8,6 +8,13 @@ body {
   font-size: 24px; /* ⬅️ Bigger base text */
   line-height: 1.6;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', serif;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+
 
 /* Navbar */
 .navbar {
