@@ -8,13 +8,13 @@ title: Experience
 <div class="card-grid">
 
   <div class="card">
-    <h3>📡 Cosmic Ray Anomaly</h3>
+    <h3>Observability of Circum-Planetary Disks with ALMA</h3>
     <p>Studied unusual high-energy cosmic rays using simulation and data modeling.</p>
-    <a href="{{ site.baseurl }}/experience/CPD.html">Read More →</a>
+    <a href="{{ site.baseurl }}/experience/CPD">Results →</a>
   </div>
 
   <div class="card">
-    <h3>🌀 Galaxy Clustering</h3>
+    <h3>Sulphur, Argon, and Nitrogen Abundances in Early Galaxies with JWST/NIRSpec</h3>
     <p>Explored redshift-space distortions using large spectroscopic surveys and Python-based data pipelines.</p>
     <a href="#">View Details</a>
   </div>
