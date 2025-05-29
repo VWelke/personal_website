@@ -1,7 +1,7 @@
 /* Base style */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #81689D;
+  background-color: #fff;
   margin: 0;
   padding: 0;
   color: #1F2544;
@@ -19,7 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navbar */
 .navbar {
   background-color: #bed7e6;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: none; /* optional: remove shadow if you prefer the line */
+  border-bottom: 3px solid #391880; /* light line separating nav and body */
   padding: 1em 0;
   position: sticky;
   top: 0;
