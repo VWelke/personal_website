@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #1F2544;
-  font-size: 24px; /* ⬅️ Bigger base text */
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -15,16 +15,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.3px;
 }
 
-
 /* Navbar */
 .navbar {
   background-color: #bed7e6;
-  box-shadow: none; /* optional: remove shadow if you prefer the line */
-  border-bottom: 3px solid #391880; /* light line separating nav and body */
+  box-shadow: none;
+  border-bottom: 3px solid #391880;
   padding: 1em 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .nav-wrapper {
@@ -67,7 +68,7 @@ main {
   text-align: center;
 }
 
-/* Heading and content */
+/* Headings & text */
 h1 {
   font-size: 2.2em;
   margin-bottom: 0.2em;
@@ -90,4 +91,94 @@ footer {
   margin: 4em 0 2em;
   color: #888;
   font-size: 0.9em;
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.card {
+  background: #F5F5F5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.02);
+}
+
+.card-date {
+  font-size: 0.85em;
+  color: #888;
+  margin: 0.8em 1em 0 1em;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 0.5em 1em;
+  font-family: 'Times New Roman', serif;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 0 1em 1em;
+  color: #333;
+}
+
+.card a {
+  margin: 0 1em 1.5em;
+  color: #443C68;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .card h3 {
+    font-size: 1.1em;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
 }
