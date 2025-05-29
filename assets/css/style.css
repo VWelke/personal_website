@@ -95,10 +95,11 @@ footer {
 
 /* Card Grid Layout */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 2em;
   margin-top: 2em;
+  align-items: center;
 }
 
 .card {
