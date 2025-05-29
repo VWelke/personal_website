@@ -109,7 +109,6 @@ footer {
   width: 100%;
   overflow: hidden;
   box-shadow: 0 8px 0 #391880； /* vertical shadow only */
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -132,19 +131,20 @@ footer {
 }
 
 .card-date {
-  font-size: 0.85em;
-  color: #888;
-  margin: 0.8em 1em 0 1em;
+  font-size: 0.75em;
+  color: #777;
+  margin: 0.8em 1em 0.3em;
 }
 
 .card h3 {
-  font-size: 1.2em;
-  margin: 0.5em 1em;
+  font-size: 1.5em;
   font-family: 'Times New Roman', serif;
+  margin: 0.3em 1em;
+  color: #1F2544;
 }
 
 .card p {
-  font-size: 1em;
+  font-size: 1em; /* Base for summaries */
   margin: 0 1em 1em;
   color: #333;
 }
