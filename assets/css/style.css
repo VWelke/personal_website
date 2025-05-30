@@ -1,4 +1,6 @@
-/* Base style */
+/* ============================= */
+/* 🎨 Base Styles                */
+/* ============================= */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
@@ -15,7 +17,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.3px;
 }
 
-/* Navbar */
+/* ============================= */
+/* 🧭 Navbar                     */
+/* ============================= */
 .navbar {
   background-color: #bed7e6;
   box-shadow: none;
@@ -60,7 +64,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #007acc;
 }
 
-/* Main content */
+/* ============================= */
+/* 📝 Content Layout             */
+/* ============================= */
 main {
   max-width: 960px;
   margin: 3em auto;
@@ -68,7 +74,6 @@ main {
   text-align: center;
 }
 
-/* Headings & text */
 h1 {
   font-size: 2.2em;
   margin-bottom: 0.2em;
@@ -85,7 +90,9 @@ a {
   font-weight: bold;
 }
 
-/* Footer */
+/* ============================= */
+/* 🔻 Footer                     */
+/* ============================= */
 footer {
   text-align: center;
   margin: 4em 0 2em;
@@ -93,7 +100,9 @@ footer {
   font-size: 0.9em;
 }
 
-/* Card Grid Layout */
+/* ============================= */
+/* 📦 Cards                      */
+/* ============================= */
 .card-grid {
   display: flex;
   flex-direction: column;
@@ -104,14 +113,15 @@ footer {
 
 .card {
   background: #F5F5F5;
-  border-radius: 6px; /* tighter fillet */
+  border-radius: 6px;
   max-width: 700px;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 8px 0 #391880； /* vertical shadow only */
+  box-shadow: 0 8px 0 #391880;  /* fixed semicolon here */
   text-align: left;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
@@ -145,7 +155,7 @@ footer {
 }
 
 .card p {
-  font-size: 1em; /* Base for summaries */
+  font-size: 1em;
   margin: 0 1em 1em;
   color: #333;
 }
@@ -161,7 +171,78 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* ============================= */
+/* 🖼️ Carousel (Hover-Arrow Style) */
+/* ============================= */
+.image-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 2em auto;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 0 #391880;
+  display: block;
+}
+
+/* Arrows appear on hover only */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(57, 24, 128, 0.8);
+  color: white;
+  border: none;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.image-slider:hover .slider-arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-arrow.left {
+  left: 10px;
+}
+
+.slider-arrow.right {
+  right: 10px;
+}
+
+.slider-arrow:hover {
+  background: rgba(57, 24, 128, 1);
+}
+
+/* ============================= */
+/* 🔙 Back Link                  */
+/* ============================= */
+.back-link {
+  display: inline-block;
+  color: #FFDCDC;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: 2em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #FFAAAA;
+}
+
+/* ============================= */
+/* 📱 Responsive Design          */
+/* ============================= */
 @media (max-width: 600px) {
   body {
     font-size: 18px;
@@ -185,55 +266,4 @@ footer {
     flex-wrap: wrap;
     gap: 1em;
   }
-}
-
-
-.back-link {
-  display: inline-block;
-  color: #FFDCDC;
-  font-weight: 500;
-  font-size: 1em;
-  text-decoration: none;
-  margin-top: 2em;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-  color: #FFAAAA;
-}
-
-/* ALMA Band Images Carousel  */
-.carousel {
-  max-width: 700px;
-  margin: 2em auto;
-  text-align: center;
-}
-
-.carousel img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 0 #391880;
-}
-
-.carousel-buttons {
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-.carousel-buttons button {
-  background-color: #391880;
-  color: white;
-  border: none;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.carousel-buttons button:hover {
-  background-color: #5741b8;
 }
