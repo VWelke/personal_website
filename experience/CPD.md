@@ -53,6 +53,4 @@ This pattern could inform our understanding of cosmic ray origins and Galactic m
 
 ---
 
-<a href="{{ site.baseurl }}/experience/" style="text-decoration: none;">
-  <h2 style="color: #FFDCDC;">← Back to Experience</h2>
-</a>
+<a href="{{ site.baseurl }}/experience/" class="back-link">← </a>
