@@ -52,34 +52,7 @@ the simulation framework to assess observability with other facilities beyond AL
   <button class="slider-arrow right" onclick="nextSlide1()">&#9654;</button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images1 = [
-      "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
-    ];
 
-    let index1 = 0;
-    const img1 = document.getElementById("carousel-img-1");
-
-    window.nextSlide1 = function () {
-      index1 = (index1 + 1) % images1.length;
-      img1.src = images1[index1];
-    };
-
-    window.prevSlide1 = function () {
-      index1 = (index1 - 1 + images1.length) % images1.length;
-      img1.src = images1[index1];
-    };
-  });
-</script>
 
 
 ## Results
@@ -97,8 +70,41 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
   <button class="slider-arrow right" onclick="nextSlide2()">&#9654;</button>
 </div>
 
+
+
+
+
+## Conclusion
+This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
+
+
+<!-- === ONE SCRIPT FOR BOTH CAROUSELS === -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // First Carousel
+    const images1 = [
+      "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
+    ];
+    let index1 = 0;
+    const img1 = document.getElementById("carousel-img-1");
+    window.nextSlide1 = function () {
+      index1 = (index1 + 1) % images1.length;
+      img1.src = images1[index1];
+    };
+    window.prevSlide1 = function () {
+      index1 = (index1 - 1 + images1.length) % images1.length;
+      img1.src = images1[index1];
+    };
+
+    // Second Carousel
     const images2 = [
       "{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png",
       "{{ site.baseurl }}/assets/images/CPD_images/C10_3_36000_pwv1.fits-image-2025-04-04-23-42-51.png",
@@ -110,27 +116,18 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
       "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
       "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
     ];
-
     let index2 = 0;
     const img2 = document.getElementById("carousel-img-2");
-
     window.nextSlide2 = function () {
       index2 = (index2 + 1) % images2.length;
       img2.src = images2[index2];
     };
-
     window.prevSlide2 = function () {
       index2 = (index2 - 1 + images2.length) % images2.length;
       img2.src = images2[index2];
     };
   });
 </script>
-
-
-
-
-## Conclusion
-This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
 
 
 ---
