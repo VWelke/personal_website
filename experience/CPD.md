@@ -46,12 +46,11 @@ the simulation framework to assess observability with other facilities beyond AL
 
 
 <!-- === FIRST CAROUSEL === -->
-<div class="carousel">
-  <img id="carousel-img-1" src="{{ site.baseurl }}/assets/images/CPD_images/band 1.png" alt="Band Image" />
-  <button class="slider-arrow left" onclick="prevSlide1()">&#9664;</button>
-  <button class="slider-arrow right" onclick="nextSlide1()">&#9654;</button>
+<div class="carousel" data-carousel="1">
+  <img class="carousel-image" src="{{ site.baseurl }}/assets/images/CPD_images/band 1.png" alt="Band image" />
+  <button class="carousel-btn prev">&#9664;</button>
+  <button class="carousel-btn next">&#9654;</button>
 </div>
-
 
 
 
@@ -64,10 +63,10 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
 
 
 <!-- === SECOND CAROUSEL === -->
-<div class="carousel">
-  <img id="carousel-img-2" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Fits Image" />
-  <button class="slider-arrow left" onclick="prevSlide2()">&#9664;</button>
-  <button class="slider-arrow right" onclick="nextSlide2()">&#9654;</button>
+<div class="carousel" data-carousel="2">
+  <img class="carousel-image" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Fits Image" />
+  <button class="carousel-btn prev">&#9664;</button>
+  <button class="carousel-btn next">&#9654;</button>
 </div>
 
 
@@ -78,57 +77,51 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
 This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
 
 
-<!-- === ONE SCRIPT FOR BOTH CAROUSELS === -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // First Carousel
-    const images1 = [
-      "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
-    ];
-    let index1 = 0;
-    const img1 = document.getElementById("carousel-img-1");
-    window.nextSlide1 = function () {
-      index1 = (index1 + 1) % images1.length;
-      img1.src = images1[index1];
-    };
-    window.prevSlide1 = function () {
-      index1 = (index1 - 1 + images1.length) % images1.length;
-      img1.src = images1[index1];
+    const imageSets = {
+      1: [
+        "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
+      ],
+      2: [
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_3_36000_pwv1.fits-image-2025-04-04-23-42-51.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_4_36000_pwv1.fits-image-2025-04-04-23-44-20.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_5_36000_pwv1.fits-image-2025-04-04-23-45-34.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_6_36000_pwv1.fits-image-2025-04-04-23-47-28.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_7_36000_pwv1.fits-image-2025-04-04-23-48-47.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_8_36000_pwv1.fits-image-2025-04-04-23-50-02.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
+        "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
+      ]
     };
 
-    // Second Carousel
-    const images2 = [
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_3_36000_pwv1.fits-image-2025-04-04-23-42-51.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_4_36000_pwv1.fits-image-2025-04-04-23-44-20.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_5_36000_pwv1.fits-image-2025-04-04-23-45-34.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_6_36000_pwv1.fits-image-2025-04-04-23-47-28.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_7_36000_pwv1.fits-image-2025-04-04-23-48-47.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_8_36000_pwv1.fits-image-2025-04-04-23-50-02.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
-      "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
-    ];
-    let index2 = 0;
-    const img2 = document.getElementById("carousel-img-2");
-    window.nextSlide2 = function () {
-      index2 = (index2 + 1) % images2.length;
-      img2.src = images2[index2];
-    };
-    window.prevSlide2 = function () {
-      index2 = (index2 - 1 + images2.length) % images2.length;
-      img2.src = images2[index2];
-    };
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+      const id = carousel.getAttribute("data-carousel");
+      const images = imageSets[id];
+      let index = 0;
+      const img = carousel.querySelector(".carousel-image");
+
+      carousel.querySelector(".prev").addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        img.src = images[index];
+      });
+
+      carousel.querySelector(".next").addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        img.src = images[index];
+      });
+    });
   });
 </script>
-
 
 ---
 
