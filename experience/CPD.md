@@ -43,14 +43,6 @@ the simulation framework to assess observability with other facilities beyond AL
 - Tools: Python, Matplotlib, SciPy
 - Filtering: energies > 10^19 eV
 
-## Results
-
-![Cosmic Ray Plot]({{ site.baseurl }}/assets/images/cosmic-ray-plot.png)
-
-Our simulation shows a 3σ excess in one sky region, potentially indicating magnetic lensing.
-
-## Conclusion
-This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
 
 
 <div class="carousel">
@@ -62,36 +54,94 @@ This pattern could inform our understanding of cosmic ray origins and Galactic m
 </div>
 
 <script>
-  const images = [
-    "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
-    "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
-  ];
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+      "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
+    ];
 
-  let index = 0;
-  const img = document.getElementById("carousel-img");
+    let index = 0;
+    const img = document.getElementById("carousel-img");
 
-  function showImage(i) {
-    img.src = images[i];
-  }
+    function showImage(i) {
+      img.src = images[i];
+    }
 
-  function nextSlide() {
-    index = (index + 1) % images.length;
-    showImage(index);
-  }
+    window.nextSlide = function () {
+      index = (index + 1) % images.length;
+      showImage(index);
+    };
 
-  function prevSlide() {
-    index = (index - 1 + images.length) % images.length;
-    showImage(index);
-  }
+    window.prevSlide = function () {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    };
+  });
 </script>
 
+
+## Results
+
+![Cosmic Ray Plot]({{ site.baseurl }}/assets/images/cosmic-ray-plot.png)
+
+Our simulation shows a 3σ excess in one sky region, potentially indicating magnetic lensing.
+
+
+
+<div class="carousel">
+  <img id="carousel-img" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Plot" />
+  <div class="carousel-buttons">
+   <button class="slider-arrow left" onclick="prevSlide()">&#9664;</button>
+   <button class="slider-arrow right" onclick="nextSlide()">&#9654;</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_3_36000_pwv1.fits-image-2025-04-04-23-42-51.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_4_36000_pwv1.fits-image-2025-04-04-23-44-20.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_5_36000_pwv1.fits-image-2025-04-04-23-45-34.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_6_36000_pwv1.fits-image-2025-04-04-23-47-28.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_7_36000_pwv1.fits-image-2025-04-04-23-48-47.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_8_36000_pwv1.fits-image-2025-04-04-23-50-02.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
+      "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
+    ];
+
+    let index = 0;
+    const img = document.getElementById("carousel-img");
+
+    function showImage(i) {
+      img.src = images[i];
+    }
+
+    window.nextSlide = function () {
+      index = (index + 1) % images.length;
+      showImage(index);
+    };
+
+    window.prevSlide = function () {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    };
+  });
+</script>
+
+
+
+
+
+## Conclusion
+This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
 
 
 ---
