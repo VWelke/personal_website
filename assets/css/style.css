@@ -171,9 +171,7 @@ footer {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 🖼️ Carousel (Hover-Arrow Style) */
-/* ============================= */
+
 /* ============================= */
 /* 🖼️ Carousel (Hover-Arrow Style) */
 /* ============================= */
@@ -227,6 +225,13 @@ footer {
 
 .carousel-btn.next {
   right: 10px;
+}
+
+.carousel-caption {
+  margin-top: 0.5em;
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem;
 }
 
 /* Hover effect for arrow buttons */
