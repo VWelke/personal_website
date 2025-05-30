@@ -56,8 +56,8 @@ This pattern could inform our understanding of cosmic ray origins and Galactic m
 <div class="carousel">
   <img id="carousel-img" src="{{ site.baseurl }}/assets/images/CPD_images/band 1.png" alt="Plot" />
   <div class="carousel-buttons">
-    <button onclick="prevSlide()">← Prev</button>
-    <button onclick="nextSlide()">Next →</button>
+   <button class="slider-arrow left" onclick="prevSlide()">&#9664;</button>
+   <button class="slider-arrow right" onclick="nextSlide()">&#9654;</button>
   </div>
 </div>
 
