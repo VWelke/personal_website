@@ -9,13 +9,14 @@ title: Observability of Circumplanetary Disks
 # Observability of Circum-Planetary Disk
 
 
-Circum-planetary disks are accretion disks around gas protoplanets.
+Circum-planetary disks（CPDs）are accretion disks surrounding gas giants that play a crucial role in both planet and moon formation. 
+In 2021, the first confirmed detection of a CPD around the protoplanet PDS 70c was made using the Atacama
+Large Millimeter/submillimeter Array (ALMA) (Myriam Benisty et al. 2021). 
 
-Circumplanetary disks (CPDs) are accretion disks surrounding forming planets that play a
-crucial role in the formation of both planets and their satellite systems. In 2021, the first
-confirmed detection of a CPD around the protoplanet PDS 70c was made using the Atacama
-Large Millimeter/submillimeter Array (ALMA) (Myriam Benisty et al. 2021). This project aims
-160 to simulate radiation from a modeled CPD system and evaluate its observability with ALMA
+The ALMA is what: add an image 
+Why important to study its observability 
+
+This project aims to simulate radiation from a modeled CPD system and evaluate its observability with ALMA
 under realistic observing conditions.
 
 
@@ -50,6 +51,21 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
 
 ## Conclusion
 This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
+
+
+<div class="grid-plot">
+  <img src="{{ site.baseurl }}/assets/images/plot1.png" alt="Plot 1">
+  <img src="{{ site.baseurl }}/assets/images/plot2.png" alt="Plot 2">
+  <img src="{{ site.baseurl }}/assets/images/plot3.png" alt="Plot 3">
+  <img src="{{ site.baseurl }}/assets/images/plot4.png" alt="Plot 4">
+  <img src="{{ site.baseurl }}/assets/images/plot5.png" alt="Plot 5">
+  <img src="{{ site.baseurl }}/assets/images/plot6.png" alt="Plot 6">
+  <img src="{{ site.baseurl }}/assets/images/plot7.png" alt="Plot 7">
+  <img src="{{ site.baseurl }}/assets/images/plot8.png" alt="Plot 8">
+  <img src="{{ site.baseurl }}/assets/images/plot9.png" alt="Plot 9">
+</div>
+
+
 
 ---
 
