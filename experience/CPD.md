@@ -67,6 +67,7 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
   <img class="carousel-image" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Fits Image" />
   <button class="carousel-btn prev">&#9664;</button>
   <button class="carousel-btn next">&#9654;</button>
+  <p class="carousel-caption">Band 1</p>
 </div>
 
 
@@ -104,20 +105,42 @@ This pattern could inform our understanding of cosmic ray origins and Galactic m
       ]
     };
 
+    const captions = {
+      2: [
+        "Band 1",
+        "Band 3",
+        "Band 4",
+        "Band 5",
+        "Band 6",
+        "Band 7",
+        "Band 8",
+        "Band 9",
+        "Band 10"
+      ]
+    };
+
     document.querySelectorAll("[data-carousel]").forEach((carousel) => {
       const id = carousel.getAttribute("data-carousel");
       const images = imageSets[id];
+      const hasCaptions = captions[id] !== undefined;
       let index = 0;
+
       const img = carousel.querySelector(".carousel-image");
+      const caption = hasCaptions ? carousel.querySelector(".carousel-caption") : null;
+
+      function updateCarousel() {
+        img.src = images[index];
+        if (caption) caption.textContent = captions[id][index];
+      }
 
       carousel.querySelector(".prev").addEventListener("click", () => {
         index = (index - 1 + images.length) % images.length;
-        img.src = images[index];
+        updateCarousel();
       });
 
       carousel.querySelector(".next").addEventListener("click", () => {
         index = (index + 1) % images.length;
-        img.src = images[index];
+        updateCarousel();
       });
     });
   });
