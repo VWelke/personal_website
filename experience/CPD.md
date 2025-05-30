@@ -45,17 +45,16 @@ the simulation framework to assess observability with other facilities beyond AL
 
 
 
+<!-- === FIRST CAROUSEL === -->
 <div class="carousel">
-  <img id="carousel-img" src="{{ site.baseurl }}/assets/images/CPD_images/band 1.png" alt="Plot" />
-  <div class="carousel-buttons">
-   <button class="slider-arrow left" onclick="prevSlide()">&#9664;</button>
-   <button class="slider-arrow right" onclick="nextSlide()">&#9654;</button>
-  </div>
+  <img id="carousel-img-1" src="{{ site.baseurl }}/assets/images/CPD_images/band 1.png" alt="Band Image" />
+  <button class="slider-arrow left" onclick="prevSlide1()">&#9664;</button>
+  <button class="slider-arrow right" onclick="nextSlide1()">&#9654;</button>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const images = [
+    const images1 = [
       "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
       "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
       "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
@@ -67,21 +66,17 @@ the simulation framework to assess observability with other facilities beyond AL
       "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
     ];
 
-    let index = 0;
-    const img = document.getElementById("carousel-img");
+    let index1 = 0;
+    const img1 = document.getElementById("carousel-img-1");
 
-    function showImage(i) {
-      img.src = images[i];
-    }
-
-    window.nextSlide = function () {
-      index = (index + 1) % images.length;
-      showImage(index);
+    window.nextSlide1 = function () {
+      index1 = (index1 + 1) % images1.length;
+      img1.src = images1[index1];
     };
 
-    window.prevSlide = function () {
-      index = (index - 1 + images.length) % images.length;
-      showImage(index);
+    window.prevSlide1 = function () {
+      index1 = (index1 - 1 + images1.length) % images1.length;
+      img1.src = images1[index1];
     };
   });
 </script>
@@ -95,17 +90,16 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
 
 
 
+<!-- === SECOND CAROUSEL === -->
 <div class="carousel">
-  <img id="carousel-img" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Plot" />
-  <div class="carousel-buttons">
-   <button class="slider-arrow left" onclick="prevSlide()">&#9664;</button>
-   <button class="slider-arrow right" onclick="nextSlide()">&#9654;</button>
-  </div>
+  <img id="carousel-img-2" src="{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png" alt="Fits Image" />
+  <button class="slider-arrow left" onclick="prevSlide2()">&#9664;</button>
+  <button class="slider-arrow right" onclick="nextSlide2()">&#9654;</button>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const images = [
+    const images2 = [
       "{{ site.baseurl }}/assets/images/CPD_images/C10_1_36000_pwv1.fits-image-2025-04-04-23-41-49.png",
       "{{ site.baseurl }}/assets/images/CPD_images/C10_3_36000_pwv1.fits-image-2025-04-04-23-42-51.png",
       "{{ site.baseurl }}/assets/images/CPD_images/C10_4_36000_pwv1.fits-image-2025-04-04-23-44-20.png",
@@ -117,25 +111,20 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
       "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
     ];
 
-    let index = 0;
-    const img = document.getElementById("carousel-img");
+    let index2 = 0;
+    const img2 = document.getElementById("carousel-img-2");
 
-    function showImage(i) {
-      img.src = images[i];
-    }
-
-    window.nextSlide = function () {
-      index = (index + 1) % images.length;
-      showImage(index);
+    window.nextSlide2 = function () {
+      index2 = (index2 + 1) % images2.length;
+      img2.src = images2[index2];
     };
 
-    window.prevSlide = function () {
-      index = (index - 1 + images.length) % images.length;
-      showImage(index);
+    window.prevSlide2 = function () {
+      index2 = (index2 - 1 + images2.length) % images2.length;
+      img2.src = images2[index2];
     };
   });
 </script>
-
 
 
 
