@@ -53,17 +53,44 @@ Our simulation shows a 3σ excess in one sky region, potentially indicating magn
 This pattern could inform our understanding of cosmic ray origins and Galactic magnetic fields.
 
 
-<div class="grid-plot">
-  <img src="{{ site.baseurl }}/assets/images/plot1.png" alt="Plot 1">
-  <img src="{{ site.baseurl }}/assets/images/plot2.png" alt="Plot 2">
-  <img src="{{ site.baseurl }}/assets/images/plot3.png" alt="Plot 3">
-  <img src="{{ site.baseurl }}/assets/images/plot4.png" alt="Plot 4">
-  <img src="{{ site.baseurl }}/assets/images/plot5.png" alt="Plot 5">
-  <img src="{{ site.baseurl }}/assets/images/plot6.png" alt="Plot 6">
-  <img src="{{ site.baseurl }}/assets/images/plot7.png" alt="Plot 7">
-  <img src="{{ site.baseurl }}/assets/images/plot8.png" alt="Plot 8">
-  <img src="{{ site.baseurl }}/assets/images/plot9.png" alt="Plot 9">
+<div class="carousel">
+  <img id="carousel-img" src="{{ site.baseurl }}/assets/images/plot1.png" alt="Plot" />
+  <div class="carousel-buttons">
+    <button onclick="prevSlide()">← Prev</button>
+    <button onclick="nextSlide()">Next →</button>
+  </div>
 </div>
+
+<script>
+  const images = [
+    "{{ site.baseurl }}/assets/images/CPD_images/band 1.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 3.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 4.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 5.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 6.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 7.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 8.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 9.png",
+    "{{ site.baseurl }}/assets/images/CPD_images/band 10.png"
+  ];
+
+  let index = 0;
+  const img = document.getElementById("carousel-img");
+
+  function showImage(i) {
+    img.src = images[i];
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
 
 
 
