@@ -186,3 +186,20 @@ footer {
     gap: 1em;
   }
 }
+
+
+.back-link {
+  display: inline-block;
+  color: #FFDCDC;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: 2em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #FFAAAA;
+}
+
+
