@@ -86,6 +86,8 @@ h1 {
 p {
   font-size: 1.1em;
   margin-bottom: 1.5em;
+  text-align: left;
+  text-indent: 2em;
 }
 
 a {
