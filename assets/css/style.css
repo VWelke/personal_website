@@ -174,22 +174,30 @@ footer {
 /* ============================= */
 /* 🖼️ Carousel (Hover-Arrow Style) */
 /* ============================= */
-.image-slider {
+/* ============================= */
+/* 🖼️ Carousel (Hover-Arrow Style) */
+/* ============================= */
+.carousel {
   position: relative;
   max-width: 700px;
   margin: 2em auto;
+  overflow: hidden;
+  text-align: center;
 }
 
-.image-slider img {
+/* Ensures image consistency across carousels */
+.carousel-image {
   width: 100%;
-  height: auto;
+  max-height: 500px; /* adjust based on your content */
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 8px 0 #391880;
   display: block;
+  margin: 0 auto;
 }
 
-/* Arrows appear on hover only */
-.slider-arrow {
+/* Arrows (hidden by default, shown on hover) */
+.carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -206,23 +214,25 @@ footer {
   transition: opacity 0.2s ease;
 }
 
-.image-slider:hover .slider-arrow {
+/* Show arrows only when hovering */
+.carousel:hover .carousel-btn {
   opacity: 1;
   pointer-events: auto;
 }
 
-.slider-arrow.left {
+/* Arrow positioning */
+.carousel-btn.prev {
   left: 10px;
 }
 
-.slider-arrow.right {
+.carousel-btn.next {
   right: 10px;
 }
 
-.slider-arrow:hover {
+/* Hover effect for arrow buttons */
+.carousel-btn:hover {
   background: rgba(57, 24, 128, 1);
 }
-
 /* ============================= */
 /* 🔙 Back Link                  */
 /* ============================= */
