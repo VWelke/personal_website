@@ -7,8 +7,10 @@ title: Observability of Circumplanetary Disks
 These slides summarize my MSci thesis work modeling circumplanetary disk observability using RADMC-3D and ALMA synthetic imaging.
 
 
-<iframe src="/personal_website/assets/2025.06.04-4.3-Welke.pptx" width="100%" height="600px">
+<iframe src="/personal_website/assets/2025.06.04-4.3-Welke.pdf" width="100%" height="600px">
+  This browser does not support PDFs. Please <a href="/personal_website/assets/2025.06.04-4.3-Welke.pdf">download the file</a>.
 </iframe>
+
 
 
 <!-- === FIRST CAROUSEL === -->
