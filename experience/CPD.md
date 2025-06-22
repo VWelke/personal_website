@@ -7,10 +7,11 @@ title: Observability of Circumplanetary Disks
 These slides summarize my MSci thesis work modeling circumplanetary disk observability using RADMC-3D and ALMA synthetic imaging.
 
 
-<iframe src="/personal_website/assets/2025.06.04-4.3-Welke.pdf" width="100%" height="600px">
-  This browser does not support PDFs. Please <a href="/personal_website/assets/2025.06.04-4.3-Welke.pdf">download the file</a>.
-</iframe>
-
+<div class="carousel" data-carousel="slides">
+  <img class="carousel-image" src="{{ site.baseurl }}/assets/images/slides/slide1.png" alt="Slide 1" />
+  <button class="carousel-btn prev">&#9664;</button>
+  <button class="carousel-btn next">&#9654;</button>
+</div>
 
 
 <!-- === FIRST CAROUSEL === -->
@@ -64,6 +65,23 @@ These slides summarize my MSci thesis work modeling circumplanetary disk observa
         "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
         "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
       ]
+      slides: [
+        "{{ site.baseurl }}/assets/images/slides/slide1.png",
+        "{{ site.baseurl }}/assets/images/slides/slide2.png",
+        "{{ site.baseurl }}/assets/images/slides/slide3.png",
+        "{{ site.baseurl }}/assets/images/slides/slide4.png",
+        "{{ site.baseurl }}/assets/images/slides/slide5.png",
+        "{{ site.baseurl }}/assets/images/slides/slide6.png",
+        "{{ site.baseurl }}/assets/images/slides/slide7.png",
+        "{{ site.baseurl }}/assets/images/slides/slide8.png",
+        "{{ site.baseurl }}/assets/images/slides/slide9.png",
+        "{{ site.baseurl }}/assets/images/slides/slide10.png",
+        "{{ site.baseurl }}/assets/images/slides/slide11.png",
+        "{{ site.baseurl }}/assets/images/slides/slide12.png",
+        "{{ site.baseurl }}/assets/images/slides/slide13.png",
+        "{{ site.baseurl }}/assets/images/slides/slide14.png",
+        "{{ site.baseurl }}/assets/images/slides/slide15.png"
+      ]    
     };
 
     const captions = {
