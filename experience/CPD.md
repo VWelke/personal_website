@@ -64,7 +64,7 @@ These slides summarize my MSci thesis work modeling circumplanetary disk observa
         "{{ site.baseurl }}/assets/images/CPD_images/C10_8_36000_pwv1.fits-image-2025-04-04-23-50-02.png",
         "{{ site.baseurl }}/assets/images/CPD_images/C10_9_36000_pwv1.fits-image-2025-04-04-23-51-46.png",
         "{{ site.baseurl }}/assets/images/CPD_images/C10_10_36000_pwv1.fits-image-2025-04-04-23-52-38.png"
-      ]
+      ],
       slides: [
         "{{ site.baseurl }}/assets/images/slides/slide1.png",
         "{{ site.baseurl }}/assets/images/slides/slide2.png",
